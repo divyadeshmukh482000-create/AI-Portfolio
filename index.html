@@ -1408,6 +1408,240 @@
     .modal-body { padding: 30px; }
     .modal-title { font-size: 28px; }
   }
+
+  /* =============================================
+     AI SYSTEMS SECTION
+  ============================================= */
+  #ai-systems { padding: 120px 0; }
+
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .ai-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .ai-card:hover {
+    border-color: var(--border2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2), 0 0 0 1px var(--border2);
+    background: var(--surface2);
+  }
+
+  .ai-card-header {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .ai-icon {
+    font-size: 28px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: var(--teal-glow2);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-card-title {
+    font-family: var(--heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .ai-card-desc {
+    font-size: 13px;
+    color: var(--text3);
+    line-height: 1.5;
+  }
+
+  .ai-capabilities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .ai-capabilities li {
+    font-size: 13px;
+    color: var(--text2);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .ai-capabilities li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 11px;
+  }
+
+  .ai-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 4px;
+    border-top: 1px solid var(--border);
+  }
+
+  .ai-tag {
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--teal);
+    background: var(--teal-glow2);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-weight: 500;
+  }
+
+  .ai-filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text2);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-family: var(--body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .ai-filter-btn:hover,
+  .ai-filter-btn.active {
+    background: var(--teal);
+    color: #0A1628;
+    border-color: var(--teal);
+    font-weight: 600;
+  }
+
+  @media (max-width: 1024px) {
+    .ai-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .ai-grid { grid-template-columns: 1fr; }
+  }
+
+
+  /* ── Rich Modal Enhancements ── */
+  .modal-rich { max-width: 760px; }
+
+  .arch-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    background: var(--teal-glow2);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .arch-node {
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-family: var(--mono);
+    color: var(--teal);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .arch-arrow { color: var(--teal); font-size: 18px; font-weight: 700; }
+
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tool-chip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--text2);
+    font-family: var(--mono);
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .impact-card {
+    background: var(--teal-glow2);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .impact-number {
+    font-family: var(--heading);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .impact-label {
+    font-size: 12px;
+    color: var(--text3);
+    line-height: 1.4;
+  }
+
+  .screens-row {
+    display: flex;
+    gap: 12px;
+  }
+  .screen-placeholder {
+    flex: 1;
+    background: var(--surface2);
+    border: 1px dashed var(--border2);
+    border-radius: 14px;
+    padding: 28px 12px;
+    text-align: center;
+    font-size: 28px;
+    color: var(--text3);
+    line-height: 1.8;
+  }
+  .screen-placeholder span {
+    display: block;
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--text3);
+  }
+
+  @media (max-width: 640px) {
+    .impact-grid { grid-template-columns: 1fr; }
+    .screens-row { flex-direction: column; }
+    .arch-flow { flex-direction: column; align-items: flex-start; }
+  }
+
 </style>
 </head>
 <body>
@@ -1418,6 +1652,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#ai-systems">AI Agents</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1451,7 +1686,7 @@
           <span class="title-chip">📋 AI Product Manager</span>
         </div>
         <p class="hero-tagline">
-          I build <strong>intelligent AI systems</strong> that automate complex workflows, from multi-agent architectures to production-ready LLM products — bridging engineering precision with strategic product thinking.
+          I turn your most repetitive workflows into autonomous AI agents — then manage the roadmap to scale them.
         </p>
         <div class="hero-ctas">
           <a href="#" class="btn-primary">
@@ -1475,7 +1710,7 @@
             <div class="stat-icon">🤖</div>
             <div>
               <div class="stat-label">Agents Built</div>
-              <div class="stat-value">10+</div>
+              <div class="stat-value">20+</div>
             </div>
           </div>
           <div class="stat-card stat-card-2">
@@ -1508,7 +1743,7 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-num">10+</div>
+        <div class="stat-num">20+</div>
         <div class="stat-desc">AI Agents Built</div>
       </div>
       <div class="stat-item">
@@ -1554,23 +1789,23 @@
           I'm a <strong>cross-functional AI builder</strong> with a rare combination: the <strong>technical depth of an engineer</strong> from Siemens, the <strong>systems thinking of a project manager</strong> from Metalman Auto, and a laser focus on building <strong>AI-powered products that actually work in production</strong>.
         </p>
         <p class="about-story">
-          I've built <strong>10+ AI agents</strong> spanning WhatsApp automation, manufacturing intelligence, and multi-agent orchestration. I don't just prototype — I design the architecture, write PRDs, manage stakeholders, and ship. I think in <strong>LangChain, reason in vector space, and communicate in business value</strong>.
+          I've built <strong>20+ AI agents</strong> spanning WhatsApp automation, manufacturing intelligence, and multi-agent orchestration. I don't just prototype — I design the architecture, write PRDs, manage stakeholders, and ship. I think in <strong>LangChain, reason in vector space, and communicate in business value</strong>.
         </p>
 
         <!-- TIMELINE -->
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-year">2024 → NOW</div>
+            <div class="timeline-year">2025 → NOW</div>
             <div class="timeline-role">AI Engineer & Automation Developer</div>
             <div class="timeline-org">Independent / AI Projects</div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2022 → 2023</div>
+            <div class="timeline-year">2025 → NOW</div>
             <div class="timeline-role">Project Management Engineer</div>
             <div class="timeline-org">Metalman Auto</div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2020 → 2022</div>
+            <div class="timeline-year">2023 → 2025</div>
             <div class="timeline-role">Mechanical Design Engineer</div>
             <div class="timeline-org">Siemens</div>
           </div>
@@ -1685,37 +1920,52 @@
 
 <!-- CASE STUDY MODALS -->
 <div class="modal-overlay" id="modal-whatsapp" onclick="closeModal(event)">
-  <div class="modal" onclick="event.stopPropagation()">
+  <div class="modal modal-rich" onclick="event.stopPropagation()">
     <div class="modal-header">
       <button class="modal-close" onclick="closeAllModals()">✕</button>
       <div class="modal-cat"><span class="tag">AI Agent</span> <span class="tag tag-blue" style="margin-left:6px">Automation</span></div>
       <h2 class="modal-title">WhatsApp Business Intelligence Suite</h2>
       <p class="modal-summary">An end-to-end conversational AI agent deployed on WhatsApp that handles customer queries 24/7, qualifies leads automatically, and syncs data to CRM — eliminating the need for a human SDR team for first-touch outreach.</p>
     </div>
-    <div class="modal-hero">💬</div>
+
     <div class="modal-body">
+
+      <!-- Problem -->
       <div class="case-section">
-        <div class="case-section-title">Problem</div>
+        <div class="case-section-title">💬 Problem</div>
         <p class="case-text">A small business was losing 60% of inbound WhatsApp leads due to slow response times. The sales team was spending 4+ hours/day on repetitive first-touch conversations, leaving high-value tasks unaddressed.</p>
       </div>
+
+      <!-- Solution -->
       <div class="case-section">
-        <div class="case-section-title">Solution Overview</div>
+        <div class="case-section-title">⚡ Solution Overview</div>
         <p class="case-text">Deployed a LangChain-powered conversational agent integrated directly into the WhatsApp Business API. The agent handles FAQs, qualifies leads using a custom scoring rubric, books discovery calls via Calendly, and pushes enriched lead data to HubSpot CRM — all autonomously.</p>
       </div>
+
+      <!-- My Role -->
       <div class="case-section">
-        <div class="case-section-title">My Role</div>
+        <div class="case-section-title">👩‍💻 My Role</div>
         <p class="case-text">End-to-end — including requirements gathering, AI architecture design, LangChain agent development, WhatsApp API integration, CRM workflow automation, and stakeholder demos.</p>
       </div>
+
+      <!-- Architecture -->
       <div class="case-section">
-        <div class="case-section-title">AI Architecture</div>
-        <div class="arch-diagram">
-          <span style="font-size:32px">🔷</span>
-          <span>WhatsApp API → LangChain Agent → Tool Router (FAQ / Lead Qual / Booking) → CRM Sync</span>
+        <div class="case-section-title">🔷 AI Architecture</div>
+        <div class="arch-flow">
+          <div class="arch-node">WhatsApp API</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">LangChain Agent</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">Tool Router<br><span style="font-size:10px;opacity:0.7">FAQ / Lead Qual / Booking</span></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">CRM Sync</div>
         </div>
       </div>
+
+      <!-- Tools -->
       <div class="case-section">
-        <div class="case-section-title">Tools Used</div>
-        <div class="tools-row">
+        <div class="case-section-title">🛠️ Tools Used</div>
+        <div class="tools-grid">
           <div class="tool-chip">🐍 Python</div>
           <div class="tool-chip">⛓️ LangChain</div>
           <div class="tool-chip">🤖 OpenAI GPT-4</div>
@@ -1725,35 +1975,41 @@
           <div class="tool-chip">⚡ Make (Integromat)</div>
         </div>
       </div>
+
+      <!-- Impact -->
       <div class="case-section">
-        <div class="case-section-title">Impact</div>
+        <div class="case-section-title">📈 Impact</div>
         <div class="impact-grid">
           <div class="impact-card">
-            <div class="impact-num">87%</div>
+            <div class="impact-number">87%</div>
             <div class="impact-label">Reduction in first-touch response time</div>
           </div>
           <div class="impact-card">
-            <div class="impact-num">3x</div>
+            <div class="impact-number">3x</div>
             <div class="impact-label">Lead qualification throughput</div>
           </div>
           <div class="impact-card">
-            <div class="impact-num">40h</div>
+            <div class="impact-number">40h</div>
             <div class="impact-label">Weekly hours saved for sales team</div>
           </div>
         </div>
       </div>
+
+      <!-- Screens -->
       <div class="case-section">
-        <div class="case-section-title">Screens</div>
-        <div class="screens-grid">
-          <div class="screen-mock">📱</div>
-          <div class="screen-mock">📊</div>
-          <div class="screen-mock">⚙️</div>
+        <div class="case-section-title">📱 Screens</div>
+        <div class="screens-row">
+          <div class="screen-placeholder">📱<br><span>Chat Interface</span></div>
+          <div class="screen-placeholder">📊<br><span>Analytics Dashboard</span></div>
+          <div class="screen-placeholder">⚙️<br><span>Agent Config</span></div>
         </div>
       </div>
-      <div style="margin-top:32px; display:flex; gap:12px;">
-        <a href="#" class="btn-primary">↓ Download PRD</a>
+
+      <!-- Actions -->
+      <div class="modal-actions">
         <button onclick="closeAllModals()" class="btn-secondary">← Back</button>
       </div>
+
     </div>
   </div>
 </div>
@@ -1880,6 +2136,373 @@
   </div>
 </div>
 
+<!-- AI SYSTEMS & AGENTS -->
+<section id="ai-systems">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-tag">🤖 Portfolio of Intelligence</div>
+      <h2 class="section-title">AI Systems & Agents Built by <span style="color:var(--teal)">Divya Deshmukh</span></h2>
+      <p class="section-sub">17 production-grade AI agents and systems spanning automation, analytics, research, and business intelligence.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="ai-filter-tabs fade-in" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px;">
+      <button class="ai-filter-btn active" onclick="filterAgents('all')">All Systems</button>
+      <button class="ai-filter-btn" onclick="filterAgents('automation')">Automation</button>
+      <button class="ai-filter-btn" onclick="filterAgents('analytics')">Analytics</button>
+      <button class="ai-filter-btn" onclick="filterAgents('content')">Content</button>
+      <button class="ai-filter-btn" onclick="filterAgents('research')">Research</button>
+      <button class="ai-filter-btn" onclick="filterAgents('business')">Business</button>
+    </div>
+
+    <div class="ai-grid" id="aiGrid">
+
+      <!-- 1 -->
+      <div class="ai-card fade-in" data-category="analytics automation">
+        <div class="ai-card-header">
+          <div class="ai-icon">💬</div>
+          <div>
+            <div class="ai-card-title">WhatsApp Business Intelligence Suite</div>
+            <div class="ai-card-desc">AI platform converting WhatsApp chat exports into structured business insights</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Chat parsing & lead extraction</li>
+          <li>Sentiment analysis</li>
+          <li>Customer analytics dashboard</li>
+          <li>Excel export automation</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">LangChain</span><span class="ai-tag">Python</span><span class="ai-tag">OpenAI</span><span class="ai-tag">Pandas</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="ai-card fade-in" data-category="automation analytics">
+        <div class="ai-card-header">
+          <div class="ai-icon">🏭</div>
+          <div>
+            <div class="ai-card-title">Manufacturing AI Assistant</div>
+            <div class="ai-card-desc">AI assistant designed for mechanical engineering workflows</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Production planning generator</li>
+          <li>Quality inspection checklist creation</li>
+          <li>Engineering document interpretation</li>
+          <li>Defect root cause analysis</li>
+          <li>Automated reports</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">RAG</span><span class="ai-tag">LangChain</span><span class="ai-tag">OpenAI</span><span class="ai-tag">Vector DB</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="ai-card fade-in" data-category="automation content research business">
+        <div class="ai-card-header">
+          <div class="ai-icon">🧠</div>
+          <div>
+            <div class="ai-card-title">AI Multi-Agent Productivity Hub</div>
+            <div class="ai-card-desc">Platform hosting multiple specialized AI agents under one roof</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Content writer & research agent</li>
+          <li>Resume / HR assistant</li>
+          <li>Code helper & PDF analyzer</li>
+          <li>Social media generator</li>
+          <li>Mechanical engineering assistant</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">Multi-Agent</span><span class="ai-tag">LangChain</span><span class="ai-tag">Streamlit</span><span class="ai-tag">OpenAI</span>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="ai-card fade-in" data-category="analytics research">
+        <div class="ai-card-header">
+          <div class="ai-icon">📄</div>
+          <div>
+            <div class="ai-card-title">Document Intelligence Agent</div>
+            <div class="ai-card-desc">AI tool for extracting insights from complex documents</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>PDF summarization</li>
+          <li>Key data extraction</li>
+          <li>Knowledge search</li>
+          <li>Structured outputs</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">RAG</span><span class="ai-tag">PyPDF</span><span class="ai-tag">OpenAI</span><span class="ai-tag">FAISS</span>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="ai-card fade-in" data-category="automation">
+        <div class="ai-card-header">
+          <div class="ai-icon">📧</div>
+          <div>
+            <div class="ai-card-title">Email Automation Agent</div>
+            <div class="ai-card-desc">AI workflow that processes and responds to incoming emails automatically</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Email classification</li>
+          <li>AI-generated summaries</li>
+          <li>Auto reply suggestions</li>
+          <li>Task extraction</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">n8n</span><span class="ai-tag">OpenAI</span><span class="ai-tag">Gmail API</span><span class="ai-tag">LangChain</span>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="ai-card fade-in" data-category="automation business">
+        <div class="ai-card-header">
+          <div class="ai-icon">🎧</div>
+          <div>
+            <div class="ai-card-title">Customer Support AI Agent</div>
+            <div class="ai-card-desc">AI assistant that automates end-to-end support operations</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>FAQ answering</li>
+          <li>Complaint classification</li>
+          <li>Response generation</li>
+          <li>Ticket tagging</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">LangChain</span><span class="ai-tag">OpenAI</span><span class="ai-tag">Pinecone</span><span class="ai-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="ai-card fade-in" data-category="analytics business">
+        <div class="ai-card-header">
+          <div class="ai-icon">🎯</div>
+          <div>
+            <div class="ai-card-title">Lead Qualification Agent</div>
+            <div class="ai-card-desc">AI system that evaluates and scores incoming leads automatically</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Lead scoring</li>
+          <li>Intent detection</li>
+          <li>Customer profiling</li>
+          <li>CRM-ready output</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">Python</span><span class="ai-tag">n8n</span><span class="ai-tag">CRM API</span>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="ai-card fade-in" data-category="automation business">
+        <div class="ai-card-header">
+          <div class="ai-icon">👥</div>
+          <div>
+            <div class="ai-card-title">Resume & HR Assistant Agent</div>
+            <div class="ai-card-desc">AI assistant that streamlines hiring and HR workflows</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Resume analysis & JD matching</li>
+          <li>Interview question generation</li>
+          <li>Candidate evaluation summaries</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">LangChain</span><span class="ai-tag">Python</span><span class="ai-tag">Streamlit</span>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="ai-card fade-in" data-category="research">
+        <div class="ai-card-header">
+          <div class="ai-icon">🔬</div>
+          <div>
+            <div class="ai-card-title">Research & Knowledge Agent</div>
+            <div class="ai-card-desc">AI system for deep research and knowledge synthesis</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Topic research</li>
+          <li>Insight summarization</li>
+          <li>Report generation</li>
+          <li>Knowledge extraction</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">LangChain</span><span class="ai-tag">Tavily</span><span class="ai-tag">OpenAI</span><span class="ai-tag">RAG</span>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="ai-card fade-in" data-category="content">
+        <div class="ai-card-header">
+          <div class="ai-icon">✍️</div>
+          <div>
+            <div class="ai-card-title">Content Creation Agent</div>
+            <div class="ai-card-desc">AI system for generating high-quality marketing and written content</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Blog writing</li>
+          <li>Marketing copy</li>
+          <li>Social media captions</li>
+          <li>Script generation</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">LangChain</span><span class="ai-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="ai-card fade-in" data-category="content business">
+        <div class="ai-card-header">
+          <div class="ai-icon">📱</div>
+          <div>
+            <div class="ai-card-title">Social Media Strategy Agent</div>
+            <div class="ai-card-desc">AI assistant for planning and executing social media content strategies</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Content calendars</li>
+          <li>Campaign planning</li>
+          <li>Engagement strategies</li>
+          <li>Post idea generation</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">LangChain</span><span class="ai-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="ai-card fade-in" data-category="automation">
+        <div class="ai-card-header">
+          <div class="ai-icon">💻</div>
+          <div>
+            <div class="ai-card-title">Code Helper Agent</div>
+            <div class="ai-card-desc">AI assistant for development tasks, debugging, and code generation</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Code generation</li>
+          <li>Debugging assistance</li>
+          <li>API integration help</li>
+          <li>Code explanations</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">Python</span><span class="ai-tag">Streamlit</span>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="ai-card fade-in" data-category="analytics research">
+        <div class="ai-card-header">
+          <div class="ai-icon">📑</div>
+          <div>
+            <div class="ai-card-title">PDF Analyzer Agent</div>
+            <div class="ai-card-desc">AI system for deep understanding of long PDF documents</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Document summarization</li>
+          <li>Section analysis</li>
+          <li>Data extraction</li>
+          <li>Structured insights</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">RAG</span><span class="ai-tag">PyPDF</span><span class="ai-tag">FAISS</span><span class="ai-tag">OpenAI</span>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="ai-card fade-in" data-category="business research">
+        <div class="ai-card-header">
+          <div class="ai-icon">📊</div>
+          <div>
+            <div class="ai-card-title">Business Strategy Agent</div>
+            <div class="ai-card-desc">AI assistant for comprehensive business analysis and strategy</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>SWOT analysis</li>
+          <li>Competitor research</li>
+          <li>Market insights</li>
+          <li>Strategic recommendations</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">LangChain</span><span class="ai-tag">Tavily</span><span class="ai-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="ai-card fade-in" data-category="automation business">
+        <div class="ai-card-header">
+          <div class="ai-icon">📝</div>
+          <div>
+            <div class="ai-card-title">Meeting & Report Generator Agent</div>
+            <div class="ai-card-desc">AI system for generating structured reports and meeting outputs</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Meeting minutes generation</li>
+          <li>Business summaries</li>
+          <li>Production reports</li>
+          <li>Action item extraction</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">Whisper</span><span class="ai-tag">Python</span><span class="ai-tag">LangChain</span>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="ai-card fade-in" data-category="analytics research">
+        <div class="ai-card-header">
+          <div class="ai-icon">🌐</div>
+          <div>
+            <div class="ai-card-title">AI Current Affairs Intelligence System</div>
+            <div class="ai-card-desc">AI platform analyzing and synthesizing global news and trends</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Real-time news aggregation</li>
+          <li>AI-powered summaries</li>
+          <li>Trend analysis</li>
+          <li>Insights generation</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">Tavily</span><span class="ai-tag">LangChain</span><span class="ai-tag">Python</span>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="ai-card fade-in" data-category="analytics research business">
+        <div class="ai-card-header">
+          <div class="ai-icon">🔮</div>
+          <div>
+            <div class="ai-card-title">AI Scenario Prediction Engine</div>
+            <div class="ai-card-desc">AI module predicting possible future outcomes of major events</div>
+          </div>
+        </div>
+        <ul class="ai-capabilities">
+          <li>Trend modeling</li>
+          <li>Scenario forecasting</li>
+          <li>Risk analysis</li>
+          <li>Strategic insights</li>
+        </ul>
+        <div class="ai-stack">
+          <span class="ai-tag">OpenAI</span><span class="ai-tag">LangChain</span><span class="ai-tag">Python</span><span class="ai-tag">Tavily</span>
+        </div>
+      </div>
+
+    </div><!-- end ai-grid -->
+  </div>
+</section>
+
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
@@ -1994,7 +2617,7 @@
           <div class="exp-meta">
             <div class="exp-role">Mechanical Design Engineer</div>
             <div class="exp-company">Siemens</div>
-            <div class="exp-period">2020 → 2022 · Pune, India</div>
+            <div class="exp-period">2023 → 2025 · Pune, India</div>
           </div>
         </div>
         <ul class="exp-responsibilities">
@@ -2014,7 +2637,7 @@
           <div class="exp-meta">
             <div class="exp-role">Project Management Engineer</div>
             <div class="exp-company">Metalman Auto</div>
-            <div class="exp-period">2022 → 2023 · India</div>
+            <div class="exp-period">2025 → NOW · India</div>
           </div>
         </div>
         <ul class="exp-responsibilities">
@@ -2080,72 +2703,7 @@
       <p class="section-sub">Switch themes and layouts live — click any option below to apply instantly.</p>
     </div>
 
-    <!-- TAGLINES -->
-    <div style="margin-bottom: 60px;">
-      <h3 style="font-family: var(--heading); font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 20px; letter-spacing: -0.3px;">✍️ 5 Tagline Options</h3>
-      <div style="display: flex; flex-direction: column; gap: 10px;" id="tagline-list">
-        <div class="tagline-option" data-idx="0" onclick="applyTagline(0)" style="padding: 18px 22px; background: var(--surface); border: 1px solid var(--border2); border-radius: 12px; font-size: 15px; color: var(--text2); line-height: 1.6; cursor:pointer; transition: all 0.2s;">
-          <strong style="color: var(--teal);">1.</strong> "I don't just build AI tools — I build AI systems that make your business <strong style="color:var(--text)">10x smarter.</strong>"
-        </div>
-        <div class="tagline-option" data-idx="1" onclick="applyTagline(1)" style="padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--text2); line-height: 1.6; cursor:pointer; transition: all 0.2s;">
-          <strong style="color: var(--teal);">2.</strong> "From Siemens blueprints to <strong style="color:var(--text)">AI agent architectures</strong> — precision engineering meets intelligent automation."
-        </div>
-        <div class="tagline-option" data-idx="2" onclick="applyTagline(2)" style="padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--text2); line-height: 1.6; cursor:pointer; transition: all 0.2s;">
-          <strong style="color: var(--teal);">3.</strong> "The rare <strong style="color:var(--text)">AI engineer who ships products, writes PRDs, and talks to your C-suite.</strong>"
-        </div>
-        <div class="tagline-option" data-idx="3" onclick="applyTagline(3)" style="padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--text2); line-height: 1.6; cursor:pointer; transition: all 0.2s;">
-          <strong style="color: var(--teal);">4.</strong> "Automation architect. LLM builder. <strong style="color:var(--text)">The person who makes AI actually work</strong> in your company."
-        </div>
-        <div class="tagline-option" data-idx="4" onclick="applyTagline(4)" style="padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; font-size: 15px; color: var(--text2); line-height: 1.6; cursor:pointer; transition: all 0.2s;">
-          <strong style="color: var(--teal);">5.</strong> "I turn your <strong style="color:var(--text)">most repetitive workflows into autonomous AI agents</strong> — then manage the roadmap to scale them."
-        </div>
-      </div>
-      <p style="font-size:12px; color:var(--text3); margin-top:10px; text-align:center;">👆 Click any tagline to apply it to the Hero section</p>
-    </div>
-
-    <!-- THEME SWITCHER -->
-    <div style="margin-bottom: 60px;">
-      <h3 style="font-family: var(--heading); font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 20px; letter-spacing: -0.3px;">🎨 3 Color Themes — Click to Apply</h3>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
-
-        <!-- Theme 1: Ocean Dark -->
-        <div class="theme-card" id="theme-ocean" onclick="applyTheme('ocean')" style="padding: 24px; border-radius: 16px; background: linear-gradient(135deg, #0A1628, #0E2A40); border: 2px solid rgba(61,224,192,0.5); cursor:pointer; transition: all 0.25s; position:relative;">
-          <div style="position:absolute; top:12px; right:12px; width:20px; height:20px; border-radius:50%; background: #3DE0C0; display:flex; align-items:center; justify-content:center; font-size:11px;" class="theme-check-ocean">✓</div>
-          <div style="font-weight: 700; color: #3DE0C0; margin-bottom: 8px; font-size:15px;">🌊 Ocean Dark</div>
-          <div style="font-size: 12px; color: #9BA8B8; line-height: 1.6; margin-bottom:12px;">Midnight blue + teal. Inspired by Anthropic & Vercel. Best for AI/tech roles.</div>
-          <div style="display:flex; gap:8px;">
-            <div style="width:28px;height:28px;border-radius:8px;background:#0A1628;border:1px solid rgba(255,255,255,0.2)"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#3DE0C0;"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#4E9FFF;"></div>
-          </div>
-        </div>
-
-        <!-- Theme 2: Clean Light -->
-        <div class="theme-card" id="theme-light" onclick="applyTheme('light')" style="padding: 24px; border-radius: 16px; background: linear-gradient(135deg, #FAFAFA, #EEF2F7); border: 2px solid rgba(0,0,0,0.1); cursor:pointer; transition: all 0.25s; position:relative;">
-          <div style="position:absolute; top:12px; right:12px; width:20px; height:20px; border-radius:50%; background: #0E1A2B; display:flex; align-items:center; justify-content:center; font-size:11px; color:white; opacity:0;" class="theme-check-light">✓</div>
-          <div style="font-weight: 700; color: #0E1A2B; margin-bottom: 8px; font-size:15px;">☀️ Clean Light</div>
-          <div style="font-size: 12px; color: #4B5567; line-height: 1.6; margin-bottom:12px;">White base + dark type. Stripe-inspired. Corporate-friendly for PM/enterprise hiring.</div>
-          <div style="display:flex; gap:8px;">
-            <div style="width:28px;height:28px;border-radius:8px;background:#FFFFFF;border:1px solid rgba(0,0,0,0.15)"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#0E1A2B;"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#3DE0C0;"></div>
-          </div>
-        </div>
-
-        <!-- Theme 3: Cosmic Purple -->
-        <div class="theme-card" id="theme-cosmic" onclick="applyTheme('cosmic')" style="padding: 24px; border-radius: 16px; background: linear-gradient(135deg, #10001A, #1A0030); border: 2px solid rgba(139,92,246,0.3); cursor:pointer; transition: all 0.25s; position:relative;">
-          <div style="position:absolute; top:12px; right:12px; width:20px; height:20px; border-radius:50%; background: #8B5CF6; display:flex; align-items:center; justify-content:center; font-size:11px; opacity:0;" class="theme-check-cosmic">✓</div>
-          <div style="font-weight: 700; color: #8B5CF6; margin-bottom: 8px; font-size:15px;">🔮 Cosmic Purple</div>
-          <div style="font-size: 12px; color: #9BA8B8; line-height: 1.6; margin-bottom:12px;">Deep purple + violet. Futuristic feel. Great for cutting-edge AI startup roles.</div>
-          <div style="display:flex; gap:8px;">
-            <div style="width:28px;height:28px;border-radius:8px;background:#10001A;border:1px solid rgba(255,255,255,0.2)"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#8B5CF6;"></div>
-            <div style="width:28px;height:28px;border-radius:8px;background:#EC4899;"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    
 
     <!-- LAYOUT SWITCHER -->
     <div>
@@ -2256,6 +2814,7 @@
   <ul class="rail-links">
     <li><a href="#about">🙋 About</a></li>
     <li><a href="#projects">🚀 Projects</a></li>
+    <li><a href="#ai-systems">🤖 AI Agents</a></li>
     <li><a href="#skills">⚡ Skills</a></li>
     <li><a href="#experience">💼 Experience</a></li>
     <li><a href="#contact">✉️ Contact</a></li>
@@ -2267,7 +2826,7 @@
 <footer>
   <div class="container">
     <div class="footer-text">
-      Designed & built for <span>Divya Deshmukh</span> · AI Engineer & Automation Architect · 2025
+      Designed & built for <span>Divya Deshmukh</span> · AI Engineer & Automation Architect · 2026
     </div>
   </div>
 </footer>
@@ -2490,6 +3049,29 @@
       orb.style.transform = `translateY(${scrollY * (i === 0 ? 0.07 : -0.04)}px)`;
     });
   });
+
+  /* =============================================
+     AI SYSTEMS FILTER
+  ============================================= */
+  function filterAgents(category) {
+    const cards = document.querySelectorAll('.ai-card');
+    const btns = document.querySelectorAll('.ai-filter-btn');
+
+    btns.forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card => {
+      const cats = card.getAttribute('data-category') || '';
+      if (category === 'all' || cats.includes(category)) {
+        card.style.display = 'flex';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
 </script>
 </body>
 </html>
